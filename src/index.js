@@ -14,7 +14,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 const fruits=["Appel","Orange","lemon","Strawberry"]
 root.render(
   <React.StrictMode>
-   <Form/>
+   <Fruit fruits={fruits}/>
   </React.StrictMode>
 );
 
