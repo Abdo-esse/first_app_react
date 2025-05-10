@@ -13,9 +13,9 @@ import Form from './Forms/Form';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const fruits=["Appel","Orange","lemon","Strawberry"]
 root.render(
-  <React.StrictMode>
-   <Fruit fruits={fruits}/>
-  </React.StrictMode>
+  // <React.StrictMode>
+   <Counter/>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
