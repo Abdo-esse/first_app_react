@@ -16,9 +16,12 @@ class Counter extends Component{
         }
     }
     componentDidMount(){
-        this.setState({
-            counter:1
-        })
+        setInterval(()=>{this.setState(
+            prevState=>{
+                return {counter: prevState.counter+1}
+            }
+        )},1000)
+        
     }
     render(){
         return(
@@ -28,5 +31,10 @@ class Counter extends Component{
         )
     }
 }
+
+
+
+
+
 
 export default Counter
