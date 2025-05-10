@@ -13,7 +13,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 const fruits=["Appel","Orange","lemon","Strawberry"]
 root.render(
   <React.StrictMode>
-   <Event/>
+   <Counter initialValue={2} stp={3}/>
   </React.StrictMode>
 );
 
