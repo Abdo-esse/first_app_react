@@ -1,15 +1,22 @@
 import React from 'react'
 
-// function HelloWorld() {
+// function HelloWorld({lastname}) {
+//     // console.log(props);
+    
 //   return (
 //     <div>
-//       hello Worled
+//      <h1> hello {lastname}</h1>
 //     </div>
 //   )
 // }
+
+
 class HelloWorld extends React.Component{
+    
+    
     render(){
-        return <h1>Hello World</h1>
+     
+        return <h1>Hello {this.props.lastname}</h1>
     }
 }
 
