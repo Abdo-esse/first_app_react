@@ -7,12 +7,13 @@ import HelloWorld from './holloWorld/HelloWorld';
 import TextField from './Forms/TextField';
 import Fruit from './Fruits/Fruit';
 import Counter from './Counter/Counter';
+import Event from './Events/Event';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const fruits=["Appel","Orange","lemon","Strawberry"]
 root.render(
   <React.StrictMode>
-    <Counter/>
+   <Event/>
   </React.StrictMode>
 );
 
