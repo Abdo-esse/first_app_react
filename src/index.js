@@ -6,12 +6,13 @@ import reportWebVitals from './reportWebVitals';
 import HelloWorld from './holloWorld/HelloWorld';
 import TextField from './Forms/TextField';
 import Fruit from './Fruits/Fruit';
+import Counter from './Counter/Counter';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const fruits=["Appel","Orange","lemon","Strawberry"]
 root.render(
   <React.StrictMode>
-    <Fruit fruits={fruits} />
+    <Counter/>
   </React.StrictMode>
 );
 
