@@ -8,12 +8,13 @@ import TextField from './Forms/TextField';
 import Fruit from './Fruits/Fruit';
 import Counter from './Counter/Counter';
 import Event from './Events/Event';
+import Form from './Forms/Form';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const fruits=["Appel","Orange","lemon","Strawberry"]
 root.render(
   <React.StrictMode>
-   <Counter initialValue={2} stp={3}/>
+   <Form/>
   </React.StrictMode>
 );
 
