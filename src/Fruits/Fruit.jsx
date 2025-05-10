@@ -1,16 +1,31 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-function Fruit() {
-  return (
+// function Fruit({fruits}) {
+//     const dispalyFruits=()=> fruits.map(item=>{return <li>{item}</li>})
+//   return (
+//     <>
+//     <h1>Fruits</h1>
+//       <ul>
+//         {dispalyFruits()}
+//       </ul>
+//     </>
+//   )
+// }
+
+class Fruit extends Component{
+
+    render(){
+        const dispalyFruits=()=>this.props.fruits.map(item=>{return <li>{item}</li>})
+        return(
     <>
+    <h1>Fruits</h1>
       <ul>
-        <li>Strawberry</li>
-        <li>lemon</li>
-        <li>Orange</li>
-        <li>Appel</li>
+        {dispalyFruits()}
       </ul>
     </>
   )
+
+    }
 }
 
 export default Fruit

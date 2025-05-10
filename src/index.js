@@ -5,15 +5,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import HelloWorld from './holloWorld/HelloWorld';
 import TextField from './Forms/TextField';
+import Fruit from './Fruits/Fruit';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const fruits=["Appel","Orange","lemon","Strawberry"]
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <HelloWorld lastname="Abdo"/>
-    <TextField lastname="Abdo" label="XXX">
-      lorem jdjdjdj
-      </TextField>
+    <Fruit fruits={fruits} />
   </React.StrictMode>
 );
 
