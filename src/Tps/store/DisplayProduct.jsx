@@ -1,15 +1,16 @@
 import React from 'react'
 
-function DisplayProduct({products}) {
+function DisplayProduct({product}) {
+    console.log(product);
+    
   return (
     <tr>
-        <td>{products.id}</td>
-        <td>{products.title}</td>
-        <td>{products.price}</td>
-        <td>{products.description}</td>
-        <td>{products.category}</td>
-        <td>{products.image}</td>
-        <td>{products.rating}</td>      
+        <td>{product.id}</td>
+        <td>{product.title}</td>
+        <td>{product.price}</td>
+        <td>{product.description}</td>
+        <td>{product.category}</td>
+        <td><img width={250} src={product.image} alt={product.title} /></td>     
     </tr>
   )
 }

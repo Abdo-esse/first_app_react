@@ -4,9 +4,16 @@ import DisplayProduct from './DisplayProduct'
 function ProductListe() {
     const [productList,setProductList]=useState([])
     const displayProducts=()=>{
-        productList.map(item=>{
-            return <DisplayProduct />
+        if(productList.length>0){
+           return productList.map((item,key)=>{            
+            return <DisplayProduct product={item} key={key}/>
         })
+        }
+        return <tr>
+              <td colSpan={7}>no item</td>
+        </tr>
+        
+        
     }
     const getProduct=async()=>{
         const response= await fetch('https://fakestoreapi.com/products')
@@ -18,7 +25,7 @@ function ProductListe() {
      getProduct();     
      
     },[])
-    console.log(productList);
+   
   return (
     <div className='container-fluix mx-auto w-75 my-3'>
       <h1>Liste des produites: </h1>
@@ -34,15 +41,7 @@ function ProductListe() {
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td scope="row"></td>
-                <td></td>
-                <td></td>
-                <td ></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
+            {displayProducts()}
         </tbody>
       </table>
     </div>
