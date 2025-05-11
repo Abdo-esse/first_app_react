@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -9,13 +10,12 @@ import Fruit from './Fruits/Fruit';
 import Counter from './Counter/Counter';
 import Event from './Events/Event';
 import Form from './Forms/Form';
+import ProductListe from './Tps/store/ProductListe';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const fruits=["Appel","Orange","lemon","Strawberry"]
 root.render(
-  // <React.StrictMode>
-   <Counter initialValue={0} stp={1 } />
-  // </React.StrictMode>
+  <ProductListe/>
 );
 
 // If you want to start measuring performance in your app, pass a function
