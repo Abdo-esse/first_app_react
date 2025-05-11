@@ -35,6 +35,7 @@ function ProductListe() {
                 <th>#id</th>
                 <th>titel</th>
                 <th>prix</th>
+                <th>description</th>
                 <th>categorei</th>
                 <th>image</th>
                 <th>rating</th>

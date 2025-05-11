@@ -1,4 +1,5 @@
 import React from 'react'
+import Rating from './Rating';
 
 function DisplayProduct({product}) {
     console.log(product);
@@ -10,7 +11,8 @@ function DisplayProduct({product}) {
         <td>{product.price}</td>
         <td>{product.description}</td>
         <td>{product.category}</td>
-        <td><img width={250} src={product.image} alt={product.title} /></td>     
+        <td><img width={250} src={product.image} alt={product.title} /></td> 
+        <td><Rating rate={product.rating.rate}  count={product.rating.count}/></td>    
     </tr>
   )
 }
