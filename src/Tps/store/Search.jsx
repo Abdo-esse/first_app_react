@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
 
-function Search() {
+
+function Search({handleSearch,displayCategories}) {
 
   return (
     <>
@@ -14,8 +14,14 @@ function Search() {
                 <input type="text"  id="search" className='form-control' />
             </div>
             <div className='col-auto'>
-                <input type="submit" className='btn btn-primary' value="Search"   />
+                <input type="submit" className='btn btn-primary' value="Search" onClick={handleSearch}   />
             </div>
+        </div>
+        <div className='row g-3 align-items-center'>
+          <h3>Categories</h3>
+          <div className="btn-group">
+            {displayCategories()}
+          </div>
         </div>
       </form>
     </>
