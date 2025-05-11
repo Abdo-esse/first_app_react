@@ -28,6 +28,7 @@ function ProductListe() {
    
   return (
     <div className='container-fluix mx-auto w-75 my-3'>
+        
       <h1>Liste des produites: </h1>
       <table className="table">
         <thead>
