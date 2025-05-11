@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Search() {
 
@@ -14,7 +14,7 @@ function Search() {
                 <input type="text"  id="search" className='form-control' />
             </div>
             <div className='col-auto'>
-                <input type="submit" className='btn btn-primary' value="Search"  />
+                <input type="submit" className='btn btn-primary' value="Search"   />
             </div>
         </div>
       </form>

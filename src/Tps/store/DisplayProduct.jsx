@@ -2,7 +2,6 @@ import React from 'react'
 import Rating from './Rating';
 
 function DisplayProduct({product}) {
-    console.log(product);
     
   return (
     <tr>

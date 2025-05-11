@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import DisplayProduct from './DisplayProduct'
+import Search from './Search'
 
 function ProductListe() {
     const [productList,setProductList]=useState([])
@@ -15,6 +16,7 @@ function ProductListe() {
         
         
     }
+    
     const getProduct=async()=>{
         const response= await fetch('https://fakestoreapi.com/products')
         const produt= await response.json();
@@ -28,7 +30,7 @@ function ProductListe() {
    
   return (
     <div className='container-fluix mx-auto w-75 my-3'>
-        
+        <Search/>
       <h1>Liste des produites: </h1>
       <table className="table">
         <thead>
