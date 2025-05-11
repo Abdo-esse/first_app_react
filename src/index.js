@@ -14,7 +14,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 const fruits=["Appel","Orange","lemon","Strawberry"]
 root.render(
   // <React.StrictMode>
-   <Counter/>
+   <Counter initialValue={0} stp={1 } />
   // </React.StrictMode>
 );
 

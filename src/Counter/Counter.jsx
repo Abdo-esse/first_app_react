@@ -1,17 +1,28 @@
-import React  ,{ Component, useState } from 'react'
+import React  ,{  useEffect, useState } from 'react'
 
-// function Counter({initialValue, stp}) {
-//     const [count,setCount]=useState(initialValue)
-//   return (
-//     <div>
-//         <button onClick={()=>{setCount(pre=>{return pre+stp })}}>Click to incremant!</button>
-//         <button onClick={()=>{setCount(0)}}>Reset !!</button>
-//       <samp>il y a {count} secondes</samp>
-//     </div>
-//   )
-// }
+function Counter({initialValue, stp}) {
+    const [count,setCount]=useState(initialValue)
+    useEffect(() => {
+  console.log("Effet exécuté");
 
-class Counter extends Component{
+  return () => {
+    console.log("Nettoyage exécuté");
+  };
+}, []);
+    useEffect(()=>{
+      console.log("Counte in changed !");
+      
+    },[count])
+  return (
+    <div>
+        <button onClick={()=>{setCount(pre=>{return pre+stp })}}>Click to incremant!</button>
+        <button onClick={()=>{setCount(0)}}>Reset !!</button>
+      <samp>il y a {count} secondes</samp>
+    </div>
+  )
+}
+
+/*class Counter extends Component{
     constructor(props){
         super(props);
         this.state={
@@ -51,7 +62,7 @@ class Counter extends Component{
      </div>
         )
     }
-}
+}*/
 
 
 
