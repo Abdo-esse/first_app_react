@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css';
-import App from './App';
+import App from './router/App';
 import reportWebVitals from './reportWebVitals';
 import HelloWorld from './holloWorld/HelloWorld';
 import TextField from './Forms/TextField';
@@ -15,7 +15,7 @@ import ProductListe from './Tps/store/ProductListe';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const fruits=["Appel","Orange","lemon","Strawberry"]
 root.render(
-  <ProductListe/>
+  <App/>
 );
 
 // If you want to start measuring performance in your app, pass a function
