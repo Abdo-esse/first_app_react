@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 function Layout() {
   return (
@@ -17,6 +17,10 @@ function Layout() {
           </li>
         </ul>
       </nav>
+
+      <div className="container-fluid w-75 mx-auto">
+        <Outlet/>
+      </div>
       
     </>
   )
