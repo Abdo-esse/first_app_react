@@ -1,15 +1,17 @@
-import React, { useRef } from 'react'
+import React, { useContext, useRef } from 'react'
+import { UsersContext } from './UsersApp'
 
-function UsersEdit({lastId,onAddUser}) {
+function UsersEdit() {
+    const context=useContext(UsersContext)
     const fullName=useRef(null)
     const country=useRef(null)
     const handelSubmit=(e)=>{
         e.preventDefault();
-        onAddUser({
+        context.addUser({
             payload:{
                 fullName:fullName.current.value,
                 country: country.current.value,
-                id:lastId+1
+                id:context.lastId+1
                     }
         })
          fullName.current.value=""
@@ -23,7 +25,7 @@ function UsersEdit({lastId,onAddUser}) {
         <div className='mb-3 row'>
             <label htmlFor="currentId"  className='col-sm-2 col-form-label'>Current ID</label>
             <div className='col-sm-10'>
-                <input type="text" readOnly className='form-conrol-plaintext'id="currentId" value={lastId+1} />
+                <input type="text" readOnly className='form-conrol-plaintext'id="currentId" value={context.lastId+1} />
             </div>
         </div>
         <div className='mb-3 row'>

@@ -14,7 +14,7 @@ function UsersLayout() {
             <Link className="nav-link " to={'/'}>Users list</Link>
         </li>
         <li className="nav-item">
-            <Link className="nav-link " to={'/'}>Add ser</Link>
+            <Link className="nav-link " to={'/user/creat'}>Add ser</Link>
         </li>
      
        </ul>

@@ -1,10 +1,12 @@
 import React, { createContext, useState } from 'react'
 
+
 import UsersLayout from './UsersLayout'
 
- const UsersContext=createContext({
+ export const UsersContext=createContext({
     users:[],
-    lastId:0
+    lastId:0,
+    addUser:()=>null
  })
 
 function UsersApp() {
@@ -16,7 +18,13 @@ function UsersApp() {
     }
   return (
     <>
+       <UsersContext.Provider value={{
+        users:users,
+        lastId:lastId,
+        addUser:addUser
+       }}>
        <UsersLayout/>
+       </UsersContext.Provider>
     </>
 
   )

@@ -1,17 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { UsersContext } from './UsersApp';
 
 function UsersTable({users}) {
+    const context=useContext(UsersContext)
 const displayUsers = () => {
-  if (users.length === 0) {
+  if (context.users.length === 0) {
     return (
       <tr>
         <td colSpan={3} align="center">No users</td>
       </tr>
     );
   }
-  console.log(users);
   
-  return users.map((item, key) => (
+  return context.users.map((item, key) => (
     <tr key={key}>
       <td>{item.id}</td>
       <td>{item.fullName}</td>
