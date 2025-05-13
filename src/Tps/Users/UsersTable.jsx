@@ -9,7 +9,8 @@ const displayUsers = () => {
       </tr>
     );
   }
-
+  console.log(users);
+  
   return users.map((item, key) => (
     <tr key={key}>
       <td>{item.id}</td>

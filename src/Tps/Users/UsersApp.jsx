@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import UsersTable from './UsersTable'
 import UsersAdd from './UsersAdd'
 
+
 const INITIAL_DATA=[
     {
         id:1,
@@ -22,9 +23,14 @@ const INITIAL_DATA=[
 
 function UsersApp() {
     const [users,setUsers]=useState([])
+    const [lastId,setLastId]=useState(0)
+    const addUser=(data)=>{
+       setUsers(preveState=>[...preveState,data.payload])
+       setLastId(preveState=>preveState+1)
+    }
   return (
     <>
-    <UsersAdd/>
+    <UsersAdd lastId={lastId} onAddUser={addUser} />
     <hr />
     <UsersTable users={users}/>
     </>
