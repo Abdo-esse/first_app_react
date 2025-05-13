@@ -6,7 +6,8 @@ import UsersLayout from './UsersLayout'
  export const UsersContext=createContext({
     users:[],
     lastId:0,
-    addUser:()=>null
+    addUser:()=>null,
+    updateUser:()=>null,
  })
 
 function UsersApp() {
@@ -16,12 +17,19 @@ function UsersApp() {
        setUsers(preveState=>[...preveState,data.payload])
        setLastId(preveState=>preveState+1)
     }
+    const updateUser=(data)=>{
+        console.log(data.payload);
+        
+    //    setUsers(preveState=>[...preveState,data.payload])
+    //    setLastId(preveState=>preveState+1)
+    }
   return (
     <>
        <UsersContext.Provider value={{
         users:users,
         lastId:lastId,
-        addUser:addUser
+        addUser:addUser,
+        updateUser:updateUser,
        }}>
        <UsersLayout/>
        </UsersContext.Provider>
