@@ -34,19 +34,19 @@ function UsersEdit() {
         <div className='mb-3 row'>
             <label htmlFor="currentId"  className='col-sm-2 col-form-label'>Current ID</label>
             <div className='col-sm-10'>
-                <input type="text" readOnly className='form-conrol-plaintext'id="currentId" value={context.lastId+1} />
+                <input type="text" readOnly className='form-conrol-plaintext'id="currentId" defaultValue={curentUser?.id} />
             </div>
         </div>
         <div className='mb-3 row'>
             <label htmlFor="fullName" className='col-sm-2 col-form-label'>Full Name</label>
             <div className='col-sm-10'>
-                <input type="text" className='form-conrol'id="fullName"  ref={fullName} />
+                <input type="text" className='form-conrol'id="fullName"  defaultValue={curentUser?.fullName} ref={fullName} />
             </div>
         </div>
         <div className='mb-3 row'>
             <label htmlFor="country" className='col-sm-2 col-form-label'>Country</label>
             <div className='col-sm-10'>
-            <select className='form-select'id="country" ref={country} >
+            <select className='form-select'id="country" ref={country} defaultValue={curentUser?.country} >
                 <option value="">Select your country</option>
                 <option value="Morocco">Morocco</option>
                 <option value="Agerai">Agerai</option>
