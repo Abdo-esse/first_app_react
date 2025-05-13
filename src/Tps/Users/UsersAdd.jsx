@@ -12,6 +12,8 @@ function UsersAdd({lastId,onAddUser}) {
                 id:lastId+1
                     }
         })
+         fullName.current.value=""
+           country.current.value=""
 
     }
       return (
