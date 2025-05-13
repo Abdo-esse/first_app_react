@@ -18,10 +18,14 @@ function UsersApp() {
        setLastId(preveState=>preveState+1)
     }
     const updateUser=(data)=>{
-        console.log(data.payload);
-        
-    //    setUsers(preveState=>[...preveState,data.payload])
-    //    setLastId(preveState=>preveState+1)
+          const {id,...rest}=data.payload
+          setUsers(preveState=>preveState.map(user=>{
+            if(user.id===id){
+                return {id:user.id,...rest}
+            }
+            return user
+          }))
+          
     }
   return (
     <>
