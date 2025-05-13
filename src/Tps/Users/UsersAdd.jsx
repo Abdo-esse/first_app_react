@@ -22,11 +22,13 @@ function UsersAdd() {
            <select className='form-select'id="">
              <option selected>Select your country</option>
              <option value="1">Morocco</option>
-             <option value="1">Morocco</option>
-             <option value="1">Morocco</option>
-             <option value="1">Morocco</option>
+             <option value="2">Agerai</option>
+             <option value="3">Tunisia</option>
            </select>
         </div>
+    </div>
+    <div className='d-grid gap-2'>
+        <button className='btn btn-primary' type='button'>add</button>
     </div>
       
     </>

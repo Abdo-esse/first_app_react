@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import UsersTable from './UsersTable'
+import UsersAdd from './UsersAdd'
 
 const INITIAL_DATA=[
     {
@@ -22,7 +23,12 @@ const INITIAL_DATA=[
 function UsersApp() {
     const [users,setUsers]=useState([])
   return (
+    <>
+    <UsersAdd/>
+    <hr />
     <UsersTable users={users}/>
+    </>
+
   )
 }
 
