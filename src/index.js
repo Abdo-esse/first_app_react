@@ -11,11 +11,19 @@ import Counter from './Counter/Counter';
 import Event from './Events/Event';
 import Form from './Forms/Form';
 import ProductListe from './Tps/store/ProductListe';
+import UsersApp from './Tps/Users/UsersApp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const fruits=["Appel","Orange","lemon","Strawberry"]
+// const fruits=["Appel","Orange","lemon","Strawberry"]
 root.render(
-  <App/>
+  <>
+  <div className=' container my-5'>
+    <UsersApp/>
+
+  </div>
+    
+
+  </>
 );
 
 // If you want to start measuring performance in your app, pass a function
