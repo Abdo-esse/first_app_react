@@ -1,23 +1,32 @@
-import React, { useContext, useRef } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import { UsersContext } from './UsersApp'
+import { useParams } from 'react-router-dom'
 
 function UsersEdit() {
     const context=useContext(UsersContext)
     const fullName=useRef(null)
     const country=useRef(null)
+    const [curentUser,setCurentUser]=useState()
+    const params=useParams()
     const handelSubmit=(e)=>{
         e.preventDefault();
-        context.addUser({
-            payload:{
-                fullName:fullName.current.value,
-                country: country.current.value,
-                id:context.lastId+1
-                    }
-        })
-         fullName.current.value=""
-           country.current.value=""
+        // context.addUser({
+        //     payload:{
+        //         fullName:fullName.current.value,
+        //         country: country.current.value,
+        //         id:context.lastId+1
+        //             }
+        // })
+        //  fullName.current.value=""
+        //    country.current.value=""
 
     }
+    useEffect(()=>{
+        const {id}=params
+        const user=context.users.filter(user=>user.id===parseInt(id))
+        user.length>0? setCurentUser(...user): console.error('user not');
+        
+    },[])
       return (
     <>
     <h1>Add users</h1>

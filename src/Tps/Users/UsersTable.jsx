@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { UsersContext } from './UsersApp';
+import { Link } from 'react-router-dom';
 
 function UsersTable({users}) {
     const context=useContext(UsersContext)
@@ -17,6 +18,10 @@ const displayUsers = () => {
       <td>{item.id}</td>
       <td>{item.fullName}</td>
       <td>{item.country}</td>
+      <td>
+        <Link to={`/user/${item.id}/edit`} className='btn btn-primary mx-1'>Update</Link>
+        <Link to={`/user/${item.id}/delete`} className='btn btn-danger'>delete</Link>
+      </td>
     </tr>
   ));
 };
@@ -30,6 +35,7 @@ const displayUsers = () => {
                 <th>#Id</th>
                 <th>Full Name</th>
                 <th>Country</th>
+                <th>Operation</th>
             </tr>
         </thead>
         <tbody>
