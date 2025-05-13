@@ -1,25 +1,11 @@
-import React, { useState } from 'react'
-import UsersTable from './UsersTable'
-import UsersAdd from './UsersAdd'
+import React, { createContext, useState } from 'react'
 
+import UsersLayout from './UsersLayout'
 
-const INITIAL_DATA=[
-    {
-        id:1,
-        fullName:'ABDEL ILAH ESSEMLAI',
-        country: 'Morocco'
-    },
-    {
-        id:2,
-        fullName:'ABDEL ILAH ESSEMLAI',
-        country: 'Morocco'
-    },
-    {
-        id:3,
-        fullName:'ABDEL ILAH ESSEMLAI',
-        country: 'Morocco'
-    }
-]
+ const UsersContext=createContext({
+    users:[],
+    lastId:0
+ })
 
 function UsersApp() {
     const [users,setUsers]=useState([])
@@ -30,9 +16,7 @@ function UsersApp() {
     }
   return (
     <>
-    <UsersAdd lastId={lastId} onAddUser={addUser} />
-    <hr />
-    <UsersTable users={users}/>
+       <UsersLayout/>
     </>
 
   )
