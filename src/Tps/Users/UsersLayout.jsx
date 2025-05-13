@@ -1,9 +1,12 @@
 import React from 'react'
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Link, Outlet, Route, Routes } from 'react-router-dom'
 import UsersTable from './UsersTable'
+import UsersAdd from './UsersAdd'
+import UsersEdit from './UsersEdit'
 
 function UsersLayout() {
   return (
+    <>
     <BrowserRouter>
     <nav>
          <ul className="nav justify-content-center">
@@ -18,9 +21,14 @@ function UsersLayout() {
     </nav>
       <Routes>
          <Route index element={<UsersTable/>} />
-         <Route path={'/user/creat'} />
+         <Route path={'/user/creat'} element={<UsersAdd/>} />
+         <Route path={'/user/:id/edit'} element={<UsersEdit/>} />
       </Routes>
     </BrowserRouter>
+
+    <Outlet/>
+
+    </>
     
   )
 }
