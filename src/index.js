@@ -7,19 +7,19 @@ import reportWebVitals from './reportWebVitals';
 import HelloWorld from './holloWorld/HelloWorld';
 import TextField from './Forms/TextField';
 import Fruit from './Fruits/Fruit';
-import Counter from './Counter/Counter';
+// import Counter from './Counter/Counter';
 import Event from './Events/Event';
 import Form from './Forms/Form';
 import ProductListe from './Tps/store/ProductListe';
 import UsersApp from './Tps/Users/UsersApp';
-import Example from './Redux/Example';
+import Counter from './Redux/Counter';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // const fruits=["Appel","Orange","lemon","Strawberry"]
 root.render(
   <>
   
-  <Example/>
+  <Counter/>
 
   </>
 );
