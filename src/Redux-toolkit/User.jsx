@@ -12,10 +12,6 @@ function User() {
         <div className='mx-auto'>
             <p className='lead mb-4'>
                 <img src={`https://flagcdn.com/48x36/${user.country.toLowerCase()}.png`} />
-                <div className='d-grid gap d-flex justify-content-center mb-5'>
-                    <button type='button' className='btn btn-primary btn-lg px-4 me-sm-3'>Update your info</button>
-                    <button type='button' className='btn btn-outline-danger btn-lg px-4'>delete your info</button>
-                </div>
             </p>
         </div>
     </div>
