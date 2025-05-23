@@ -10,10 +10,14 @@ const user={
     initialState:user,
     reducers:{
         user:{
+            resetInfo: (state)=>state,
+            updayeInfo: (state,action)=>console.log(action)
+            
 
         }
     }
 })
 
+export const {resetInfo,updayeInfo}=userSlice.actions
 
 export default userSlice.reducer
