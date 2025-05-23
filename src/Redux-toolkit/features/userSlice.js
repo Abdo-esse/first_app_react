@@ -9,12 +9,12 @@ const user={
     name:'user',
     initialState:user,
     reducers:{
-        user:{
-            resetInfo: (state)=>state,
+            resetInfo: (state)=>{
+                state.name=""
+                state.age=""
+                state.country=""
+            },
             updayeInfo: (state,action)=>console.log(action)
-            
-
-        }
     }
 })
 

@@ -1,13 +1,17 @@
 import React, { useRef } from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { userSelectore } from './userSelectore'
+import { resetInfo } from './features/userSlice'
 
 function UserForme() {
     const name=useRef()
     const age=useRef()
-    const user= useSelector(userSelectore)
     const country=useRef()
-    const resetUserCallback=()=>{
+    const user= useSelector(userSelectore)
+    const dispatch=useDispatch()
+    const resetUserCallback=(e)=>{
+      e.preventDefault();
+      dispatch(resetInfo())
 
     }
     const handleSubmit=()=>{
