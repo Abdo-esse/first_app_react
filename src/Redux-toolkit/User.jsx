@@ -3,8 +3,24 @@ import { useSelector } from 'react-redux'
 import { userSelectore } from './userSelectore'
 
 function User() {
-    const selectore= useSelector(userSelectore)
-  return <>{JSON.stringify(selectore)}</> 
+    const user= useSelector(userSelectore)
+  return (
+  <>
+
+    <div className='px-4 pt-5 text-center border-bottom'>
+        <h1 className='display-4 fw-bold'>{user.name } ({user.age})</h1>
+        <div className='mx-auto'>
+            <p className='lead mb-4'>
+                <img src={`https://flagcdn.com/48x36/${user.country.toLowerCase()}.png`} />
+                <div className='d-grid gap d-flex justify-content-center mb-5'>
+                    <button type='button' className='btn btn-primary btn-lg px-4 me-sm-3'>Update your info</button>
+                    <button type='button' className='btn btn-outline-danger btn-lg px-4'>delete your info</button>
+                </div>
+            </p>
+        </div>
+    </div>
+  
+  </> )
 }
 
 export default User

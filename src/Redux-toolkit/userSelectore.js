@@ -1,1 +1,1 @@
-export const userSelectore=(state)=>console.log(state);
+export const userSelectore=({user})=> user;
