@@ -7,14 +7,14 @@ function User() {
   return (
   <>
 
-    <div className='px-4 pt-5 text-center border-bottom'>
+   {user.name && <div className='px-4 pt-5 text-center border-bottom'>
         <h1 className='display-4 fw-bold'>{user.name } ({user.age})</h1>
         <div className='mx-auto'>
             <p className='lead mb-4'>
                 <img src={`https://flagcdn.com/48x36/${user.country.toLowerCase()}.png`} />
             </p>
         </div>
-    </div>
+    </div>}
   
   </> )
 }
