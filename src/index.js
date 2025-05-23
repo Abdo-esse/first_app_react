@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css';
-import App from './router/App';
+
 import reportWebVitals from './reportWebVitals';
 import HelloWorld from './holloWorld/HelloWorld';
 import TextField from './Forms/TextField';
@@ -13,13 +13,14 @@ import Form from './Forms/Form';
 import ProductListe from './Tps/store/ProductListe';
 import UsersApp from './Tps/Users/UsersApp';
 import Counter from './Redux/Counter';
+import App from './Redux-toolkit/App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // const fruits=["Appel","Orange","lemon","Strawberry"]
 root.render(
   <>
   
-  <Counter/>
+  <App/>
 
   </>
 );
